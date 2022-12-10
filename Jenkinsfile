@@ -1,4 +1,5 @@
 def remote = [:]
+                remote.name = 'test'
                 remote.host = '0.tcp.ngrok.io'
                 remote.port = 17139
                 remote.user = 'root'
