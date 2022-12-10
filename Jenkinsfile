@@ -8,8 +8,8 @@ pipeline {
 
             steps {
 
-                echo 'building application'
-                curl 'http://f188-34-68-29-155.ngrok.io'
+                sh 'echo building application'
+                sh 'http://f188-34-68-29-155.ngrok.io'
 
             }
 
