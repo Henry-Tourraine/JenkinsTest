@@ -6,7 +6,7 @@ pipeline {
 
         stage("build") {
 
-            setps {
+            steps {
 
                 echo 'building applciation'
 
@@ -16,7 +16,7 @@ pipeline {
 
         stage("test") {
 
-            setps {
+            steps {
 
                 echo 'testing application'
                 
@@ -25,7 +25,7 @@ pipeline {
         }
         stage("deploy") {
 
-            setps {
+            steps {
 
                 echo 'deploying application'
                 
