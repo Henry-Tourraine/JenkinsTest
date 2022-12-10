@@ -1,2 +1,1 @@
-testjenkins
-su
+watashi wa testjenkinsu
