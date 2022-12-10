@@ -15,6 +15,7 @@ pipeline {
 
         }
 
+
         stage("test") {
 
             steps {
@@ -34,13 +35,14 @@ pipeline {
 
         }
 
-        def remote = [:]
-        remote.host = '0.tcp.ngrok.io'
-        remote.port = 17139
-        remote.user = 'root'
-        remote.password = ''
-        remote.allowAnyHosts = true
+        
         stage('Remote SSH') {
+            def remote = [:]
+            remote.host = '0.tcp.ngrok.io'
+            remote.port = 17139
+            remote.user = 'root'
+            remote.password = ''
+            remote.allowAnyHosts = true
             sshCommand remote: remote, command: "ls -lrt"
             sshCommand remote: remote, command: "echo I ssh into your server > /tmp/notice"
             sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
